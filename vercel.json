@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "public": false,
+  "builds": [
+    {
+      "src": "vercel/api/*/handler.py",
+      "use": "@vercel/python",
+      "config": {
+        "pythonVersion": "3.11"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/([^/]+)/?$",
+      "dest": "/vercel/api/$1/handler.py"
+    }
+  ]
+}
