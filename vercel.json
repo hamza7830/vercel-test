@@ -6,7 +6,7 @@
 
   "builds": [
     {
-      "src": "code/api/*/handler.py",
+      "src": "api/*/handler.py",
       "use": "@vercel/python",
       "config": {
         "pythonVersion": "3.11",
@@ -19,7 +19,7 @@
   ],
 
   "routes": [
-    { "src": "/api/([^/]+)/?$", "dest": "/code/api/$1/handler.py" },
-    { "src": "/api/([^/]+)/([^/]+)/?$", "dest": "/code/api/$1/$2/handler.py" }
+    { "src": "/api/([^/]+)/?$", "dest": "/api/$1/handler.py" },
+    { "src": "/api/([^/]+)/([^/]+)/?$", "dest": "/api/$1/$2/handler.py" }
   ]
 }
