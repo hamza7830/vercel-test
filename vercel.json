@@ -6,16 +6,20 @@
 
   "builds": [
     {
-      "src": "vercel/api/*/handler.py",
+      "src": "code/api/*/handler.py",
       "use": "@vercel/python",
       "config": {
-        "pythonVersion": "3.11"
+        "pythonVersion": "3.11",
+        "includeFiles": [
+          "code/api/brand-sentiment/pipeline.py",
+          "code/api/brand-sentiment/requirements.txt"
+        ]
       }
     }
   ],
 
   "routes": [
-    { "src": "/api/([^/]+)/?$", "dest": "/vercel/api/$1/handler.py" },
-    { "src": "/api/([^/]+)/([^/]+)/?$", "dest": "/vercel/api/$1/$2/handler.py" }
+    { "src": "/api/([^/]+)/?$", "dest": "/code/api/$1/handler.py" },
+    { "src": "/api/([^/]+)/([^/]+)/?$", "dest": "/code/api/$1/$2/handler.py" }
   ]
 }
