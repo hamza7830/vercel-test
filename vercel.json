@@ -11,8 +11,8 @@
       "config": {
         "pythonVersion": "3.11",
         "includeFiles": [
-          "code/api/brand-sentiment/pipeline.py",
-          "code/api/brand-sentiment/requirements.txt"
+          "api/brand-sentiment/pipeline.py",
+          "api/brand-sentiment/requirements.txt"
         ]
       }
     }
