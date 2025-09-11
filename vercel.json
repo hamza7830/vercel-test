@@ -3,6 +3,8 @@
 	"github":   {
 		"enabled": false
 	},
+	"env": { "PYTHONDONTWRITEBYTECODE": "1" },
+
 	"builds":   [
 
 		{
@@ -42,10 +44,12 @@
       "use": "@vercel/python",
       "config": {
           "pythonVersion": "3.11",
-          "includeFiles": [
+        "includeFiles": [
+          "_app/**",
+          "_helper/**",
           "vercel/api/brand-sentiment/pipeline.py",
           "vercel/api/brand-sentiment/requirements.txt"
-          ]
+        ]
       }
       }
 	],
@@ -66,4 +70,5 @@
 	],
 	"version":  2
 }
+
 
