@@ -4,17 +4,7 @@
 		"enabled": false
 	},
 	"builds":   [
-        {
-        "src": "vercel/api/brand-sentiment/handler.py",
-        "use": "@vercel/python",
-        "config": {
-            "pythonVersion": "3.11",
-            "includeFiles": [
-            "vercel/api/brand-sentiment/pipeline.py",
-            "vercel/api/brand-sentiment/requirements.txt"
-            ]
-        }
-        },
+
 		{
 			"src": "vercel/api/*/handler.py",
 			"use": "@vercel/python",
@@ -42,7 +32,18 @@
 			"config": {
 				"includeFiles": ["_app/**", "_helper/**", "vercel/api/generate-copy/resources/templates/template_seo.xlsx, vercel/api/generate-copy/resources/image/8ms.png"]
 			}
-		}
+		},
+    {
+      "src": "vercel/api/brand-sentiment/handler.py",
+      "use": "@vercel/python",
+      "config": {
+          "pythonVersion": "3.11",
+          "includeFiles": [
+          "vercel/api/brand-sentiment/pipeline.py",
+          "vercel/api/brand-sentiment/requirements.txt"
+          ]
+      }
+      }
 	],
 	"routes": [
         { "src": "^/vercel/api/brand-sentiment/?$", "dest": "/vercel/api/brand-sentiment/handler.py" },
