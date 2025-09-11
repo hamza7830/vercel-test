@@ -9,6 +9,7 @@
 			"src": "vercel/api/*/handler.py",
 			"use": "@vercel/python",
 			"config": {
+				"pythonVersion": "3.11",
 				"includeFiles": ["_app/**", "_helper/**"]
 			}
 		},
@@ -16,6 +17,7 @@
 			"src": "vercel/api/generate-copy/facebook/handler.py",
 			"use": "@vercel/python",
 			"config": {
+				"pythonVersion": "3.11",				
 				"includeFiles": ["_app/**", "_helper/**", "vercel/api/generate-copy/resources/templates/template_ad_copy.xlsx, vercel/api/generate-copy/resources/image/8ms.png"]
 			}
 		},
@@ -23,6 +25,7 @@
 			"src": "vercel/api/generate-copy/google/handler.py",
 			"use": "@vercel/python",
 			"config": {
+				"pythonVersion": "3.11",				
 				"includeFiles": ["_app/**", "_helper/**", "vercel/api/generate-copy/resources/templates/template_ad_copy.xlsx, vercel/api/generate-copy/resources/image/8ms.png"]
 			}
 		},
@@ -30,6 +33,7 @@
 			"src": "vercel/api/generate-copy/seo/handler.py",
 			"use": "@vercel/python",
 			"config": {
+				"pythonVersion": "3.11",				
 				"includeFiles": ["_app/**", "_helper/**", "vercel/api/generate-copy/resources/templates/template_seo.xlsx, vercel/api/generate-copy/resources/image/8ms.png"]
 			}
 		},
@@ -62,3 +66,4 @@
 	],
 	"version":  2
 }
+
