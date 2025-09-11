@@ -2,7 +2,7 @@ from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 import json
 
-from pipeline import run_for_datasets
+from .pipeline import run_for_datasets
 
 class handler(BaseHTTPRequestHandler):
     def _json(self, code, payload):
@@ -56,3 +56,4 @@ class handler(BaseHTTPRequestHandler):
             self._json(200, {"ok": True, "result": result})
         except Exception as e:
             self._json(500, {"ok": False, "error": str(e)})
+
